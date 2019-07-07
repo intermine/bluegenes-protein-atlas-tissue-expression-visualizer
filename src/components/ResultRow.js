@@ -8,7 +8,7 @@ function ResultRow({ organName, overall, cells = [] }) {
 	return (
 		<tr className="result-row-container">
 			<td className="item">
-				<HeatBox strength={overall} />
+				<HeatBox noTooltip strength={overall} />
 			</td>
 			<td className="item" title={organName}>
 				{organName}
@@ -16,7 +16,11 @@ function ResultRow({ organName, overall, cells = [] }) {
 			<td className="item">{cells.length}</td>
 			<td className="item">
 				{cells.map((c, i) => (
-					<HeatBox key={i} strength={STRENGTHS[c.level]} />
+					<HeatBox
+						key={i}
+						organName={c.cellType}
+						strength={STRENGTHS[c.level]}
+					/>
 				))}
 			</td>
 		</tr>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const STRENGTH_COLORS = ['#BE463A', '#F09F4C', '#FCEC9A', '#FFFFFF'].reverse();
 
-function HeatBox({ organName, strength }) {
+function HeatBox({ organName, strength, noTooltip }) {
 	return (
 		<div
 			style={{
@@ -12,9 +12,9 @@ function HeatBox({ organName, strength }) {
 				background: STRENGTH_COLORS[strength || 0],
 				border: '0.5px solid black'
 			}}
-			className="tooltip"
+			className={!noTooltip ? 'tooltip' : ''}
 		>
-			<span className="tooltiptext">{organName}</span>
+			{!noTooltip && <span className="tooltiptext">{organName}</span>}
 		</div>
 	);
 }
