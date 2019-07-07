@@ -1,20 +1,14 @@
 import React from 'react';
 import HeatBox from './HeatBox';
+import { STRENGTHS } from '../constants';
 
-const STRENGTHS = {
-	'Not detected': 0,
-	Low: 1,
-	Medium: 2,
-	High: 3
-};
-
-function ResultRow({ organName, cells = [] }) {
+function ResultRow({ organName, overall, cells = [] }) {
 	// sort on basis of antibody staining
 	cells = cells.sort((c1, c2) => STRENGTHS[c2.level] - STRENGTHS[c1.level]);
 	return (
 		<tr className="result-row-container">
 			<td className="item">
-				<HeatBox />
+				<HeatBox strength={overall} />
 			</td>
 			<td className="item" title={organName}>
 				{organName}
