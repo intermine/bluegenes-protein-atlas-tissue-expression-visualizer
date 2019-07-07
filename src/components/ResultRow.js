@@ -1,16 +1,16 @@
 import React from 'react';
 import HeatBox from './HeatBox';
 
-function ResultRow() {
+function ResultRow({ organ, cellTypes }) {
 	return (
 		<tr className="result-row-container">
 			<td className="item">
 				<HeatBox />
 			</td>
-			<td className="item">
-				Digestive tractDigestive tractDigestive tractDigestive
+			<td className="item" title={organ}>
+				{organ}
 			</td>
-			<td className="item">10</td>
+			<td className="item">{cellTypes}</td>
 			<td className="item">
 				<HeatBox />
 				<HeatBox />
