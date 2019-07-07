@@ -1,5 +1,6 @@
 import React from 'react';
 import queryData from './queryData';
+import ResultTable from './components/ResultTable';
 
 class RootContainer extends React.Component {
 	componentDidMount() {
@@ -8,13 +9,21 @@ class RootContainer extends React.Component {
 			entity: { value }
 		} = this.props;
 
-		queryData(value, serviceUrl);
+		queryData(value, serviceUrl).then(res => {
+			const map = new Map();
+			res.proteinAtlasExpression.forEach(r => {
+				const cells = map.get(r.tissue.tissueGroup.name) || [];
+				cells.push(r);
+				map.set(r.tissue.tissueGroup.name, cells);
+			});
+		});
 	}
 
 	render() {
 		return (
 			<div className="rootContainer">
-				<h1>Your Data Viz Here</h1>
+				<p className="title">Protein Atlas Tissue Expression</p>
+				<ResultTable />
 			</div>
 		);
 	}

@@ -3,18 +3,20 @@ import HeatBox from './HeatBox';
 
 function ResultRow() {
 	return (
-		<div className="result-row-container">
-			<div className="item">
+		<tr className="result-row-container">
+			<td className="item">
 				<HeatBox />
-			</div>
-			<div className="item">Digestive tract</div>
-			<div className="item">10</div>
-			<div className="item">
+			</td>
+			<td className="item">
+				Digestive tractDigestive tractDigestive tractDigestive
+			</td>
+			<td className="item">10</td>
+			<td className="item">
 				<HeatBox />
 				<HeatBox />
 				<HeatBox />
-			</div>
-		</div>
+			</td>
+		</tr>
 	);
 }
 
