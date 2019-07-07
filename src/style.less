@@ -1,46 +1,44 @@
 .bluegenesProteinAtlasTissueExpressionVisualizer {
-  // put all your css classes inside this block. Keeping them
-  // nested under the tool name prevents your styles from
-  // leaking out and affecting other elements by accident.
 
-  // If you want to learn more about LESS, visit lesscss.org.
-
-  // to build your css, run `lessc src/style.css dist/style.css --clean-css`
-  // in your terminal
-
-
-  // this is just an example class for root div element, you may modify or delete it as per your usecase
 	.rootContainer {
 		border: 1px solid black;
-		padding: 20px;
+		padding: 8px 20px;
+		font-family: sans-serif;
+		.title {
+			text-align: center;
+			background: lightgreen;
+			padding: 8px;
+		}
 	}
 
 	.result-row-container {
 		display: flex;
 		align-items: center;
+		font-size: 12px;
 
 		// overall result
 		.item:nth-child(1) {
 			margin-right: 20px;
-			width: 10%;
+			width: 2%;
 		}
 
 		// organ name
 		.item:nth-child(2) {
 			margin-right: 20px;
-			max-width: 40%;
+			width: 60%;
+			max-width: 60%;
 		}
 
 		// cell types
 		.item:nth-child(3) {
 			margin-right: 20px;
-			width: 10%;
+			width: 2%;
 		}
 
 		// antibody staining
 		.item:nth-child(4) {
 			margin-right: 20px;
-			width: 40%;
+			display: flex;
 		}
 	}
 }
