@@ -1,5 +1,6 @@
 import React from 'react';
 import queryData from './queryData';
+import Loading from './components/Loading';
 import ResultTable from './components/ResultTable';
 
 class RootContainer extends React.Component {
@@ -20,6 +21,7 @@ class RootContainer extends React.Component {
 
 		queryData(value, serviceUrl)
 			.then(res => {
+				this.setState({ loading: false });
 				const map = new Map();
 				res.proteinAtlasExpression.forEach(r => {
 					const cells = map.get(r.tissue.tissueGroup.name) || [];
@@ -36,6 +38,8 @@ class RootContainer extends React.Component {
 				<p className="title">Protein Atlas Tissue Expression</p>
 				{this.state.error ? (
 					<div className="error">{this.state.error}</div>
+				) : this.state.loading ? (
+					<Loading />
 				) : (
 					<ResultTable data={this.state.data} />
 				)}
