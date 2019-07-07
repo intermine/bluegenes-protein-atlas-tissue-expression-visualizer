@@ -3,14 +3,13 @@ import ResultRow from './ResultRow';
 
 class ResultTable extends React.Component {
 	render() {
+		const { data } = this.props;
 		return (
 			<table cellSpacing={8}>
 				<tbody>
-					<ResultRow organ="Hello world" cellTypes={10} />
-					<ResultRow
-						organ="Hello worldHello worldHello worldHello worldHello worldHello worldHello worldHello worldHello worldHello world"
-						cellTypes={10}
-					/>
+					{Object.keys(data).map(key => (
+						<ResultRow key={key} organName={key} cells={data[key]} />
+					))}
 				</tbody>
 			</table>
 		);

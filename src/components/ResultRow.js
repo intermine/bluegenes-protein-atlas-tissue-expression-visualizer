@@ -2,13 +2,15 @@ import React from 'react';
 import HeatBox from './HeatBox';
 
 const STRENGTHS = {
-	'Not Detected': 0,
+	'Not detected': 0,
 	Low: 1,
 	Medium: 2,
 	High: 3
 };
 
 function ResultRow({ organName, cells = [] }) {
+	// sort on basis of antibody staining
+	cells = cells.sort((c1, c2) => STRENGTHS[c2.level] - STRENGTHS[c1.level]);
 	return (
 		<tr className="result-row-container">
 			<td className="item">
