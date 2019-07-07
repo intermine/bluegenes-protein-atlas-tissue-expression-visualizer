@@ -14,4 +14,33 @@
 		border: 1px solid black;
 		padding: 20px;
 	}
+
+	.result-row-container {
+		display: flex;
+		align-items: center;
+
+		// overall result
+		.item:nth-child(1) {
+			margin-right: 20px;
+			width: 10%;
+		}
+
+		// organ name
+		.item:nth-child(2) {
+			margin-right: 20px;
+			max-width: 40%;
+		}
+
+		// cell types
+		.item:nth-child(3) {
+			margin-right: 20px;
+			width: 10%;
+		}
+
+		// antibody staining
+		.item:nth-child(4) {
+			margin-right: 20px;
+			width: 40%;
+		}
+	}
 }
