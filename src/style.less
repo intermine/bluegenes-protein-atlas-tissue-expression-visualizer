@@ -7,37 +7,23 @@
 		.title {
 			text-align: center;
 			background: lightgreen;
-			padding: 8px;
+			padding: 4px;
 		}
 	}
 
 	.result-row-container {
-		display: flex;
-		align-items: center;
 		font-size: 12px;
-
-		// overall result
-		.item:nth-child(1) {
-			margin-right: 20px;
-			width: 2%;
-		}
 
 		// organ name
 		.item:nth-child(2) {
-			margin-right: 20px;
-			width: 60%;
-			max-width: 60%;
-		}
-
-		// cell types
-		.item:nth-child(3) {
-			margin-right: 20px;
-			width: 2%;
+			max-width: 400px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 
 		// antibody staining
 		.item:nth-child(4) {
-			margin-right: 20px;
 			display: flex;
 		}
 	}
