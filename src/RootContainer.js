@@ -21,13 +21,13 @@ class RootContainer extends React.Component {
 
 		queryData(value, serviceUrl)
 			.then(res => {
-				this.setState({ loading: false });
-				const map = new Map();
+				const map = {};
 				res.proteinAtlasExpression.forEach(r => {
-					const cells = map.get(r.tissue.tissueGroup.name) || [];
+					const cells = map[r.tissue.tissueGroup.name] || [];
 					cells.push(r);
-					map.set(r.tissue.tissueGroup.name, cells);
+					map[r.tissue.tissueGroup.name] = cells;
 				});
+				this.setState({ loading: false, data: map });
 			})
 			.catch(error => this.setState({ error }));
 	}
