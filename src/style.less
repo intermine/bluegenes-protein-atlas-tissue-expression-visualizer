@@ -6,7 +6,8 @@
 		font-family: sans-serif;
 		.title {
 			text-align: center;
-			background: lightgreen;
+			background: #164594;
+			color: white;
 			padding: 4px;
 		}
 	}
@@ -20,6 +21,15 @@
 	.result-row-container {
 		font-size: 12px;
 
+		td {
+			text-align: center;
+		}
+
+		.item:nth-child(1) {
+			display: flex;
+    	justify-content: center;
+		}
+
 		// organ name
 		.item:nth-child(2) {
 			max-width: 400px;
@@ -31,6 +41,8 @@
 		// antibody staining
 		.item:nth-child(4) {
 			display: flex;
+			align-items: center;
+			margin-left: 26px;
 		}
 	}
 
