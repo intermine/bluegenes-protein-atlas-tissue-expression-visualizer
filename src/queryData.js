@@ -1,4 +1,4 @@
-const proteinAtlasExpressionQuery = symbol => ({
+const proteinAtlasExpressionQuery = geneId => ({
 	from: 'Gene',
 	select: [
 		'symbol',
@@ -17,18 +17,18 @@ const proteinAtlasExpressionQuery = symbol => ({
 	],
 	where: [
 		{
-			path: 'symbol',
+			path: 'Gene.id',
 			op: '=',
-			value: symbol
+			value: geneId
 		}
 	]
 });
 
-function queryData(symbol, serviceUrl, imjsClient = imjs) {
+function queryData(geneId, serviceUrl, imjsClient = imjs) {
 	return new Promise((resolve, reject) => {
 		const service = new imjsClient.Service({ root: serviceUrl });
 		service
-			.records(proteinAtlasExpressionQuery(symbol))
+			.records(proteinAtlasExpressionQuery(geneId))
 			.then(data => {
 				if (data && data.length) resolve(data[0]);
 				else reject('No data found!');
