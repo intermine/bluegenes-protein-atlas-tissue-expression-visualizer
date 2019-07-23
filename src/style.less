@@ -54,24 +54,28 @@
 		background: #F7FCFE;
 	}
 
-	.tooltip .tooltiptext {
-		visibility: hidden;
-		width: 120px;
-		background-color: #fff;
-		color: black;
-		text-align: center;
-		border-radius: 6px;
-		padding: 5px 0;
-		margin-top: 18px;
-		border: 1px solid black;
-	
-		/* Position the tooltip */
-		position: absolute;
-		z-index: 1;
+	.atlas-tooltip {
+		.tooltiptext {
+			visibility: hidden;
+			width: 120px;
+			background-color: #fff;
+			color: black;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 0;
+			margin-top: 18px;
+			border: 1px solid black;
+		
+			/* Position the tooltip */
+			position: absolute;
+			z-index: 1;
+		}
 	}
 	
-	.tooltip:hover .tooltiptext {
-		visibility: visible;
+	.atlas-tooltip:hover {
+		.tooltiptext {
+			visibility: visible;
+		}
 	}
 
 	.loading {

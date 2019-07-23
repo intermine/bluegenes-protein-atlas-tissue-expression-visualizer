@@ -37,7 +37,11 @@ class RootContainer extends React.Component {
 			<div className="rootContainer">
 				<p className="title">Protein Atlas Tissue Expression</p>
 				{this.state.error ? (
-					<div className="error">{this.state.error}</div>
+					<div className="error">
+						{this.state.error.message
+							? 'Something went wrong!'
+							: this.state.error}
+					</div>
 				) : this.state.loading ? (
 					<Loading />
 				) : (

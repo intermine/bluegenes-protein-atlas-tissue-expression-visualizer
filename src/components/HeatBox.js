@@ -12,7 +12,7 @@ function HeatBox({ organName, strength, noTooltip }) {
 				background: STRENGTH_COLORS[strength || 0],
 				border: '0.5px solid black'
 			}}
-			className={!noTooltip ? 'tooltip' : ''}
+			className={!noTooltip ? 'atlas-tooltip' : ''}
 		>
 			{!noTooltip && <span className="tooltiptext">{organName}</span>}
 		</div>
