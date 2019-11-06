@@ -1,8 +1,8 @@
 {
   "name": "@intermine/bluegenes-protein-atlas-tissue-expression-visualizer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "src/index.js",
-  "description": "",
+  "description": "Visualize protein expression in organ tissue with a heatmap showing overall and cell specific antibody staining values.",
   "homepage": "http://www.intermine.org",
   "scripts": {
     "test": "jest",

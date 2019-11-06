@@ -1,7 +1,7 @@
 #  BlueGenes Protein Atlas Tissue Expression Visualizer
 
 BlueGenes Protein Atlas Tissue Expression Visualizer is a tool made for [BlueGenes](http://bluegenes.apps.intermine.org) following BlueGenes Tool API.
-Add more description of your tool here! :)
+Visualize protein expression in organ tissue with a heatmap showing overall and cell specific antibody staining values.
 
 ## Licence
 
