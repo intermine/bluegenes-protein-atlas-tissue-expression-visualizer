@@ -4,6 +4,10 @@
   "main": "src/index.js",
   "description": "Visualize protein expression in organ tissue with a heatmap showing overall and cell specific antibody staining values.",
   "homepage": "http://www.intermine.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intermine/bluegenes-protein-atlas-tissue-expression-visualizer"
+  },
   "scripts": {
     "test": "jest",
     "build": "./node_modules/.bin/webpack",
