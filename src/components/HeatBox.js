@@ -1,6 +1,6 @@
 import React from 'react';
 
-const STRENGTH_COLORS = ['#BE463A', '#F09F4C', '#FCEC9A', '#FFFFFF'].reverse();
+const STRENGTH_COLORS = ['#FFFFFF', '#FCEC9A', '#F09F4C', '#BE463A'];
 
 function HeatBox({ organName, strength, noTooltip }) {
 	return (

@@ -1,5 +1,4 @@
 .bluegenesProteinAtlasTissueExpressionVisualizer {
-
 	.rootContainer {
 		border: 1px solid black;
 		padding: 8px 20px;
@@ -18,8 +17,22 @@
 		text-align: center;
 	}
 
+	table {
+		border-spacing: 4px;
+	}
+
 	th {
 		cursor: pointer;
+		white-space: nowrap;
+
+		.arrow {
+			display: inline-block;
+			padding: 5px;
+		}
+
+		.arrow.rotated180 {
+			transform: rotate(180deg);
+		}
 	}
 
 	.result-row-container {
@@ -31,7 +44,7 @@
 
 		.item:nth-child(1) {
 			display: flex;
-    	justify-content: center;
+			justify-content: center;
 		}
 
 		// organ name
@@ -51,7 +64,7 @@
 	}
 
 	.result-row-container:nth-child(odd) {
-		background: #F7FCFE;
+		background: #f7fcfe;
 	}
 
 	.atlas-tooltip {
@@ -65,13 +78,13 @@
 			padding: 5px 0;
 			margin-top: 18px;
 			border: 1px solid black;
-		
+
 			/* Position the tooltip */
 			position: absolute;
 			z-index: 1;
 		}
 	}
-	
+
 	.atlas-tooltip:hover {
 		.tooltiptext {
 			visibility: visible;
@@ -87,7 +100,7 @@
 			transform-origin: center;
 			animation: rotate 2s linear infinite;
 		}
-		
+
 		circle {
 			fill: none;
 			stroke: #fc2f70;
@@ -97,13 +110,13 @@
 			stroke-linecap: round;
 			animation: dash 1.5s ease-in-out infinite;
 		}
-		
+
 		@keyframes rotate {
 			100% {
 				transform: rotate(360deg);
 			}
 		}
-		
+
 		@keyframes dash {
 			0% {
 				stroke-dasharray: 1, 200;
