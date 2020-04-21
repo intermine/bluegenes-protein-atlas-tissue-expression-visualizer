@@ -23,15 +23,24 @@ class RootContainer extends React.Component {
 
 	handleSort(event) {
 		switch (event.currentTarget.className) {
-		case 'cells' :
-			this.setState({ data: this.state.sortedByCellAmount, sortedBy: 'cellAmount' });
-			break;
-		case 'overall' :
-			this.setState({ data: this.state.sortedByOverallExpression, sortedBy: 'overallExpression' });
-			break;
-		case 'organ' :
-			this.setState({ data: this.state.sortedByOrganName, sortedBy: 'organName' });
-			break;
+			case 'cells':
+				this.setState({
+					data: this.state.sortedByCellAmount,
+					sortedBy: 'cellAmount'
+				});
+				break;
+			case 'overall':
+				this.setState({
+					data: this.state.sortedByOverallExpression,
+					sortedBy: 'overallExpression'
+				});
+				break;
+			case 'organ':
+				this.setState({
+					data: this.state.sortedByOrganName,
+					sortedBy: 'organName'
+				});
+				break;
 		}
 	}
 
@@ -101,10 +110,7 @@ class RootContainer extends React.Component {
 				) : this.state.loading ? (
 					<Loading />
 				) : (
-					<ResultTable
-						handleSort={this.handleSort}
-						{...this.state}
-					/>
+					<ResultTable handleSort={this.handleSort} {...this.state} />
 				)}
 			</div>
 		);
