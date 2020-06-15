@@ -19,5 +19,6 @@
   "toolName" : {
     "human" :"BlueGenes Protein Atlas Tissue Expression Visualizer",
     "cljs" :"bluegenesProteinAtlasTissueExpressionVisualizer"    
-  }
+  },
+  "version": 2
 }
